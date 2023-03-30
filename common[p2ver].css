@@ -1,0 +1,914 @@
+@charset "utf-8";
+.hidden {position: absolute; margin-left: 0;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); }
+
+
+/* @charset "utf-8"; */
+/* 초기화 */
+* { box-sizing: border-box; }
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, fieldset, figure, blockquote,
+th, td, input { margin: 0; padding: 0; }
+fieldset { border: 0; }
+a { text-decoration: none; color: #000; }
+address { font-style: normal; }
+small { font-size: 1em; }
+
+/* 웹폰트 */
+@font-face {
+    font-family: "웰컴체regular";
+    src: url(font/웰컴체/웰컴체OTF\ Regular.otf);
+}
+@font-face {
+    font-family: "kopub바탕med";
+    src: url(font/KoPubBatangMedium.ttf);
+}
+@font-face {
+    font-family: "G마켓light";
+    src: url(font/GmarketSansTTFLight.ttf);
+}
+@font-face {
+    font-family: "NotosansKR-R";
+    src: url(font/NotoSansKR-Regular.otf);
+}
+@font-face {
+    font-family: "NotosansKR-B";
+    src: url(font/NotoSansKR-Bold.otf);
+}
+
+body {}
+
+.hidden {position: absolute; margin-left: 0;
+width: 1px; height: 1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0); }
+/*hr {display: none;}*/
+
+li{list-style: none;}
+li>ul{
+    display: none;
+}
+
+header{
+    width: 100%;
+    height: 92px;
+    position: fixed; top: 0; left: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between; 
+}
+header>h1{position: absolute; top: 31px; left: 212px;}
+header>h1 img{
+    width: 125px;
+    height: 30px;
+    float: left;
+}
+#topcenter{margin: auto;}
+#topcenter>ul{display: flex; margin-left: 110px;}
+#topcenter>ul li{
+    width: 200px;
+    font-family: "NotosansKR-R";
+    font-size: 20px;
+    margin: auto;
+}
+
+
+#topright { 
+    position: absolute; 
+    top: 29px; 
+    right: 142px;
+}
+#topright>ul{display: flex;}
+#topright>ul li{
+    font-family: "NotosansKR-R";
+    font-size: 19px;
+    margin: auto;
+
+}
+#topright>ul li:nth-child(2){
+    margin-left: 33px;
+    
+}
+
+.submenu { 
+    display: none;
+    position: absolute; top: 5px; right: 10px;
+}
+
+aside{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF7EF;
+    position: fixed; top: 352px; right: 15px;
+    border-radius: 9px;
+    width: 83px;
+    height: 228px;
+    justify-content: center;
+    text-align: center;
+
+}
+aside>p{
+    font-size: 21px;
+    font-family: "kopub바탕med";
+    color: #000;
+    margin-top: 13px;
+    margin: auto;
+
+}
+aside .snsbox{
+    width: 36px;
+    height: 159px;
+    margin: auto;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+aside .snsbox>a img{
+    width: 36px;
+    overflow: hidden;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+
+main{
+    width: 100%;
+    overflow: hidden;
+}
+
+#SHOW{
+    width: 100%;
+    height: 928px;   
+    background: url(img/1page\ 전체배경/메인회사[거래카드].jpg);
+    /*background-image: url(img/1page\ 전체배경/1pg 사진2.jpg);
+      background-image: url(img/1page\ 전체배경/1pg 사진3.jpg); */
+}
+.maintext{
+    width: 826px;
+    height: 928px;
+    padding:260px 0 0 190px;
+    background-color: rgba(0, 0, 0, 0.18);
+}
+.maintext>h2{
+   font-size: 42px;
+   font-family: "kopub바탕med";
+   font-weight: normal;
+   color: #fff;
+}
+.maintext>span{
+    width: 173px;
+    border-bottom: 1px solid #fff;
+    /*이건 어떻게 처리해야할까? 방법만 물어보기!! (Q1.0326)*/
+}
+.maintext>p{
+    font-size: 20px;
+    font-family: "NotosansKR-R";
+    color: #fff;
+}
+
+
+main>#BUSINESS{ /*50% 50% l r 을 나눠서 주고싶음. px보단..*/
+    width: 100%;
+    height: 984px;
+    background-color: #FFF7EF;
+    display: flex;
+    justify-content: space-between;
+}
+#BUSINESS #sec2_l{
+    width: 50%;
+    float: left;
+    margin-top: 187px;
+    /*padding: 0 70px;*/
+    padding-left: 10%;
+}
+
+#BUSINESS #sec2_l>h2{
+    font-family: "kopub바탕med";
+    font-weight: normal;
+    font-size: 45px;
+    padding: 16px 21px;
+    /*padding-left: 21px;*/
+    margin-bottom: 27px;
+    border-left: 4px solid #D70C18;
+    display: flex;
+    align-items: center;
+
+}
+
+.sec2_1{
+    font-family: "NotosansKR-R";
+    font-size: 25px;
+    margin: 0;
+    margin-top: 43px;
+    padding: 0 1em;/*시안대로 맞추려 30px/1em무작위로 찾아서 넣음(이방법맞나?)*/
+    color: #707273;
+}
+.sec2_2{
+    font-family: "kopub바탕med";
+    font-size: 25px;
+    color: #707273;
+    margin: 0;
+    margin-top: 54px;/*줄간격 어떻게?*/
+    padding: 0 1em;
+
+}
+.sec2_2>span{
+    color: #000;
+
+}
+.sec2_btn{
+    width: 380px;
+    height: 53px;
+    display: flex;
+    /* background-color: blue; */
+    margin-left: 35px;
+    margin-top: 135px;
+    
+}
+.sec2_btn>a p{
+    justify-content: space-between;
+    width: 180px;
+    height: 53px;
+    background-color: #D70C18;
+    font-size: 19px;
+    color: #fff;
+    border: none;
+    border-radius: 163px;
+    margin: 0 20px;
+    text-align: center;
+    line-height: 53px;
+}
+.sec2_btn>a:nth-child(2)>p{
+    background-color: #fff;
+    border: 1px solid #D70C18;
+    color: #D70C18;
+}
+.sec2_r { width: 50%; height: 100%; background: url(img/MAINPAGE-PIC2.jpg) no-repeat center / cover; }
+/* height 100vh 대신 100%로 수정 [이 문구들은 나중에 다 지울예정]*/
+
+#STORY{
+    width: 100%;
+    height: 984px;
+    display: flex;
+    
+}
+
+#STORY>.sec3_left{
+    width: 50%;
+}
+
+#STORY>.sec3_right{
+    width: 50%;
+    height: 984px;
+    /* background-color: rgb(190, 190, 236); */
+}
+
+.sec3_left>h2{
+    font-size: 35px;
+    font-family: "kopub바탕med";
+    font-weight: normal;
+    margin-top: 170px;
+    margin-left: 243px;
+    border-left: 2px solid #D70C18;
+    padding-left: 27px;
+    
+}
+
+.sec3_left>h3{
+    font-size: 25px;
+    font-family: "NotosansKR-R";
+    font-weight: normal;
+    margin-top: 42px;
+    margin-left: 270px;
+    color: #707273;
+}
+.sec3_left>h3 span{
+    color: #000;
+    font-family: "NotosansKR-B";
+}
+.sec3_left>p{
+    font-family: "NotosansKR-R";
+    font-size: 20px;
+    font-weight: normal;
+    color: #707273;
+    margin: 0;
+    margin-left: 270px;
+    padding-top: 46px;
+
+}
+
+.plusinfo{
+    display: flex;
+    flex-direction: column;
+    display: block;
+    width: 302px;
+    height: 136px;
+    margin-top: 139px;
+    margin-left: 270px;
+}
+.plusinfo>li{
+    width: 302px;
+    height: 53px;
+    background-color: #D70C18;
+    border-radius: 45px;
+}
+.plusinfo>li:nth-child(2){
+    margin-top: 30px;
+}
+.plusinfo>li p{
+    text-align: center;
+    color: #fff;
+    font-family: "NotosansKR-R";
+    font-size: 21px;
+    margin: auto;
+    line-height: 53px;
+}
+  /* 아마 필요없을것. 향후 확신되면 지우기. 
+.sec3_right>li:nth-child(1){
+    margin-top: 165px;
+    margin-right: 261px;
+} */
+.sec3_right>li{
+    width: 790px;
+    height: 208px;
+    margin: 46px 0;
+    /* margin: 46px; 상자간 간격인데 */ 
+    display: flex;
+    justify-content: left;
+}
+.sec3_right>li:nth-child(1){
+    margin-top: 165px;
+}
+
+.first_art>p{
+    font-size: 19px;
+    font-family: "NotosansKR-R";
+    color: #000;
+    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 0;
+    
+}
+.first_art>p span{
+    font-size: 22px;
+    color: #707273;
+    font-family: "kopub바탕med";
+    padding-bottom: 18px;
+    padding-left: 4px;
+}
+.first_art>img{
+    width: 380px;
+    height: 208px;
+    float: left;
+    border-radius: 18px;
+}
+
+.second_art>p{
+    font-size: 19px;
+    font-family: "NotosansKR-R";
+    color: #000;
+    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 0;
+}
+.second_art>p span{
+    font-size: 22px;
+    color: #707273;
+    font-family: "kopub바탕med";
+    padding-bottom: 18px;
+    padding-left: 4px;
+}
+.second_art>img{
+    width: 380px;
+    height: 208px;
+    float: left;
+    border-radius: 18px;
+}
+
+.third_art>p{
+    font-size: 19px;
+    font-family: "NotosansKR-R";
+    color: #000;
+    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 0;
+}
+.third_art>p span{
+    font-size: 22px;
+    color: #707273;
+    font-family: "kopub바탕med";
+    padding-bottom: 18px;
+    padding-left: 4px;
+}
+.third_art>img{
+    width: 380px;
+    height: 208px;
+    float: left;
+    border-radius: 18px;
+}
+
+#SERVICE{
+    width: 100%;
+    height: 984px;
+    background-color: #FFF7EF;
+    
+}
+
+.sec4_head{
+    height: 48px;
+    display: flex;
+    justify-content: left;
+    padding-top: 92px;
+    padding-left: 243px;
+}
+.sec4_head>span{
+    height: 48px;
+    border-left: 2px solid #D70C18;
+}
+.sec4_head>h2{
+    font-size: 35px;
+    font-weight: normal;
+    font-family: "kopub바탕med";
+    padding-left: 25px;
+    line-height: 48px;
+}
+.sec4_head>h3{
+    font-size: 25px;
+    font-family: "NotosansKR-R";
+    font-weight: normal;
+    margin-left: 30px;
+    line-height: 48px;
+    color: #707273;
+}
+.sec4_head h3>span{
+    color: #000;
+    font-family: "NotosansKR-B";
+}
+
+#sec4_five{
+    width: 100%;
+    height: 523px;
+    display: flex;
+    margin-top: 204px;/*실제 214px인데 도안처럼 만드려 줄임수정.*/
+}
+#sec4_five>li{
+    width: 20%;
+    height: 523px;
+    overflow: hidden;
+    margin: 0 15px;
+    justify-content: center;
+    border-radius: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 45px;
+}
+
+.sec4_bottom{
+    width: 131px;
+    height: 46px;
+    border: 2px solid #D70C18;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 95px auto;
+    
+}
+.sec4_bottom>a{
+    color: #D70C18;
+    font-size: 21px;
+    font-family: "NotosansKR-R";
+    justify-content: center;
+}
+
+.sec4_1{
+    height: 523px;
+    background: url(img/laundary-service1.jpg) no-repeat center / cover; 
+    /* blackcover.jpg */
+}
+.sec4_2{
+    height: 523px;
+    background: url(img/번개결제/buggae-web.jpg) no-repeat center / cover; 
+}
+.sec4_3{
+    height: 523px;
+    background: url(img/service-center3.jpg) no-repeat center / cover;
+    background-position-y: -35px;
+    /* background 사진 배경화면 유지하면서 올릴필요가 있음. */
+}
+.sec4_4{
+    height: 523px;
+    background: url(img/preference.jpg) no-repeat center / cover; 
+}
+.sec4_5{
+    height: 523px;
+    background: url(img/search.jpg) no-repeat center / cover; 
+}
+
+
+#sec4_five>li>p{
+    font-size: 25px;
+    font-family: "G마켓light";
+    color: #FFF7EF;
+}
+#sec4_five>li:nth-child(3) p{
+    color: #707273;
+}
+#sec4_five>li:nth-child(3)>span{
+    border: 1px solid #707273;
+}
+#sec4_five>li:nth-child(5) p{
+    color: #707273;
+}
+#sec4_five>li:nth-child(5)>span{
+    border: 1px solid #707273;
+}
+
+
+
+#sec4_five>li>span{
+    width: 27px;
+    height: 0;
+    border: 1px solid #FFF7EF;
+    margin-top: 62px;
+    margin-left: 45%;
+    margin-bottom: 37px;
+}
+#sec4_five>li a{
+    width: 174px;
+    height: 57px;
+    line-height: 57px;
+    background-color: #D70C18;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-family: "NotosansKR-R";
+    display: block;
+    margin: 0 auto;
+}
+
+#TEAM{
+    width: 100%;
+    overflow: hidden;
+    /* background-color: skyblue; */
+}
+.sec5_head{
+    height: 48px;
+    display: flex;
+    justify-content: left;
+    padding-top: 92px;
+    padding-left: 243px;
+}
+
+.sec5_head>span{
+    height: 48px;
+    border-left: 2px solid #D70C18;
+}
+.sec5_head>h2{
+    font-size: 35px;
+    font-family: "kopub바탕med";
+    font-weight: normal;
+    padding-left: 25px;
+    line-height: 48px;
+}
+.sec5_head>h3{
+    font-size: 25px;
+    font-family: "NotosansKR-R";
+    font-weight: normal;
+    margin-left: 30px;
+    line-height: 48px;
+    color: #707273;
+}
+.sec5_head h3>span{
+    color: #000;
+    font-family: "NotosansKR-B";
+    font-weight: normal;
+}
+
+#sec5_main{
+    width: 100%;
+    height: 611px;
+    display: flex;
+    margin-top: 204px;
+}
+#sec5_main>li{
+    width: 33.33%;
+    height: 611px;
+    overflow: hidden;
+    margin: 0 25px;
+    justify-content: center;
+    border-radius: 39px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 111px;
+}
+#TEAM>a{
+    width: 131px;
+    height: 46px;
+    border: 2px solid #D70C18;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 95px auto;
+    
+}
+
+#sec5_main>li .big5{
+    font-size: 35px;
+    font-family: "G마켓light";
+    color: #FFF7EF;
+}
+#sec5_main>li span{
+    width: 276px;
+    height: 0;
+    border: 1px solid #FFF7EF;
+    margin-top: 22px;
+    margin-bottom: 62px;
+    /*의문점: 가운데로 어떻게? 보낼까..*/
+}
+#sec5_main>li .small5{
+    font-size: 22px;
+    font-family: "G마켓light";
+    color: #fff;
+}
+#sec5_main>li>.direct{
+    width: 214px;
+    height: 51px;
+    background-color: #D70C18;
+    line-height: 51px;
+    color: #FFF7EF;
+    text-align: center;
+    font-size: 20px;
+    font-family: "NotosansKR-R";
+    margin: 0 50%;
+    transform: translate(-50%,-50%);
+
+}
+#TEAM>a{
+    color: #D70C18;
+    font-size: 21px;
+    font-family: "NotosansKR-R";
+    justify-content: center;
+}
+
+.main1{
+    height: 611px;
+    background: url(img/culture1.jpg) no-repeat center / cover; 
+    /* blackcover.jpg */
+}
+.main2{
+    height: 611px;
+    background: url(img/culture2.jpg) no-repeat center / cover; 
+    /* blackcover.jpg */
+}
+
+.main3{
+    height: 611px;
+    background: url(img/culture3.jpg) no-repeat center / cover;
+    /* blackcover.jpg */
+}
+
+#NEWSROOM{
+    width: 100%;
+    height: 984px;
+    overflow: hidden;
+    background-color: #FFF7EF;
+}
+.sec6_head{
+    height: 48px;
+    display: flex;
+    justify-content: left;
+    padding-top: 92px;
+    padding-left: 243px;
+}
+#main6{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin-top: 204px;
+
+}
+
+
+.sec6_head>span{
+    height: 48px;
+    border-left: 2px solid #D70C18;
+}
+.sec6_head>h2{
+    font-size: 35px;
+    font-family: "kopub바탕med";
+    padding-left: 25px;
+    line-height: 48px;
+    font-weight: normal;
+}
+.sec6_head>h3{
+    font-size: 25px;
+    font-family: "NotosansKR-R";
+    margin-left: 30px;
+    line-height: 48px;
+    color: #707273;
+    font-weight: normal;
+}
+.sec6_head h3>span{
+    color: #000;
+    font-family: "NotosansKR-B";
+}
+
+#main6>.left6{
+    width: 50%;
+    text-align: left;
+    padding-left: 269px;
+}
+#main6>.right6{
+    width: 50%;
+}
+.l1_6{
+    font-size: 45px;
+    font-family: "NotosansKR-R";
+    color: #707273;
+}
+.l1_6>span{
+    font-family: "NotosansKR-B";
+}
+.l2_6{
+    font-size: 20px;
+    font-family: "NotosansKR-R";
+    color: #707273;
+    padding-top: 30px;
+}
+.l2_6>span{
+    font-family: "NotosansKR-B";
+    color: #D70C18;
+}
+
+.left6>a{
+    width: 287px;
+    height: 78px;
+    line-height: 78px;
+    background-color: #D70C18;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    font-family: "NotosansKR-R";
+    display: flex;
+    justify-content: center;
+    margin-top: 136px;
+}
+
+.right6{
+    width: 956px;
+    height: 654px;
+}
+.pic6_main{
+    width: 952px;
+    height: 508px;
+    background: url(img/newroompic.jpg) no-repeat center / cover;
+    border-radius: 30px;
+}
+.r1_6{
+    color: #000;
+    font-size: 25px;/* 원본은 28인데 줄였음. */
+    font-family: "NotosansKR-B";
+    padding: 10px 15px;
+}
+.r2_6>span{
+    color: #707273;
+    font-family: "NotosansKR-R";
+    font-size: 22px;
+    padding-right: 8em;
+
+}
+.r2_6{
+    font-size: 22px;
+    font-family: "웰컴체regular";
+    color: #D70C18;
+    padding-left: 15px;
+    float: left;
+    
+}
+
+footer{
+    width: 100%;
+    height: 618px;
+    margin-top: 15px;
+}
+footer>hr{
+    margin-top: 0;
+}
+footer>#footarea{
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+}
+#footarea>.foot_l{
+    width: 30%;
+    height: 620px;
+    position: relative;
+    
+}
+#footarea>.foot_l>img{
+    position: absolute;
+    width: 30%;
+    overflow: hidden;
+    top: 10%;
+    right: 10%;
+}
+#footarea>.foot_r{
+    background-color: blue;
+    width: 70%;
+    height: 620px;
+    overflow: hidden;
+    position: relative;
+}
+#footarea>.foot_r ul{
+    display: flex;
+    width: 1115px;
+    height: 78px;
+}
+.foot_r1>li:nth-child(1){
+    height: 64px;
+    border-right: 1px solid #000;
+    padding: 0 44px;
+}
+.foot_r1_2{
+    padding: 0 44px;
+}
+#footer_b{
+    display: flex;
+    width: 100%;/* width: 1115px; */
+    height: 73px;
+    margin-top: 125px;
+    background-color: red;
+    justify-content: space-between;
+    
+}
+#footer_b>.footerb_l{
+    display: flex;
+    flex-direction: column;
+    
+}
+.footerb_l li a{
+    padding-left: 56px;
+}
+.footerb_l li:nth-child(3) a{
+    padding-left: 24px;
+}
+
+.footerb_l>p{
+    padding: 17px 148px;
+}
+#footer_b>.footerb_r{
+    display: flex;
+    flex-direction: column;
+    width: 194px;
+    height: 71px;
+    justify-content: right;
+    
+}
+.footerb_r ul{
+    height: 37px;
+    align-items: baseline;
+    
+}
+.footerb_r ul>li:nth-child(2) img{
+    padding: 0 43px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
